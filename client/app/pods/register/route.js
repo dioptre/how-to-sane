@@ -11,12 +11,10 @@ export default Ember.Route.extend({
                 url: '/api/v1/users',
                 type: 'POST',
                 data: JSON.stringify({
-                	user: {
 	                    password: model.get('password'),
 	                    email: model.get('email'),
 	                    firstName: model.get('firstName'),
 	                    lastName: model.get('lastName')
-                    }
                 }),
                 contentType: 'application/json'
             }).then((response) => {
