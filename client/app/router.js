@@ -118,6 +118,7 @@ Router.map(function() {
 
   this.resource('pages', { path: 'pages/*slug' }, function() {});
 
+  this.route('Permission');
 });
 
 export default Router;

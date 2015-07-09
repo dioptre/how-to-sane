@@ -27,8 +27,8 @@ module.exports.models = {
   * See http://sailsjs.org/#/documentation/concepts/ORM/model-settings.html  *
   *                                                                          *
   ***************************************************************************/
-  migrate: 'safe', //for NoSQL this should be 'safe' and for postgres or MySQL 'alter'
-
+  //migrate: 'safe', //for NoSQL this should be 'safe' and for postgres or MySQL 'alter'
+  migrate: 'alter',
   /***************************************************************************
   *                                                                          *
   * Forces mongo to use schema (false by default)                            *
