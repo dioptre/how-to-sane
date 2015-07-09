@@ -92,18 +92,18 @@ _.merge(exports, {
         bcrypt.genSalt(10, function(err, salt) {
             bcrypt.hash(user.password, salt, function(err, hash) {
                 if (err) {
-                    console.log(err);
+                    //`console.log(err);
                     cb(err);
                 } else {
                     user.password = hash;
-		    console.log(user.password);
+		    //console.log(user.password);
                     cb(null, user);
                 }
             });
         });
     },
     beforeValidation: function(user, cb) {
-	console.log(user);
+	//console.log(user);
 	cb();
     }
 });
