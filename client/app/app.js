@@ -8,7 +8,7 @@ import Route from './overrides/route';
 var App;
 
 Ember.MODEL_FACTORY_INJECTIONS = true;
-
+//Ember.ENV.RAISE_ON_DEPRECATION = true;
 App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,

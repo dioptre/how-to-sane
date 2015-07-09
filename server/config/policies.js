@@ -53,6 +53,12 @@ module.exports.policies = {
     UserController: {
         "create": true
     },
+
+
+    PostController: {
+	"*" : true
+    },
+
 //    AuthController: {
 //        '*': true,
 //    }
