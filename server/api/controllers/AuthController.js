@@ -40,6 +40,7 @@ _.merge(exports, {
                         });
                     } else {
                         issueTokens(user, res);
+			req.session.authenticated = true;
                     }
                 });
             });
@@ -72,6 +73,8 @@ _.merge(exports, {
 
                 user = bearerToken;
                 issueTokens(user, res);
+		req.session.authenticated = true;
+
             };
         }
     }
