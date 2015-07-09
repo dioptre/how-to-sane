@@ -44,7 +44,6 @@ module.exports.policies = {
     '*': [ 'passport' ]
   },
 
-
     AppController: {
         'serve': true
     },
@@ -52,7 +51,7 @@ module.exports.policies = {
         "find": true,
     },
     UserController: {
-        "create": true,
+        "create": true
     },
 //    AuthController: {
 //        '*': true,
@@ -80,3 +79,4 @@ module.exports.policies = {
     // }
 
 };
+

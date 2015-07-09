@@ -96,10 +96,15 @@ _.merge(exports, {
                     cb(err);
                 } else {
                     user.password = hash;
+		    console.log(user.password);
                     cb(null, user);
                 }
             });
         });
+    },
+    beforeValidation: function(user, cb) {
+	console.log(user);
+	cb();
     }
 });
 
