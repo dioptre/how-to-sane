@@ -28,11 +28,13 @@
     "pluralize": "^1.1.0",
     "rc": "~0.5.0",
     "sails": "^0.11.0",
+    "sails-auth": "^1.2.7",
     "sails-disk": "~0.10.0",
     "sails-generate-ember-blueprints": "0.0.2",
     "sails-hook-dev": "git://github.com/balderdashy/sails-hook-dev",
     "sails-hook-eslint": "^1.0.1",
-    "sails-mongo": "^0.10.6"
+    "sails-mongo": "^0.10.6",
+    "sails-permissions": "^1.2.0"
   },
   "scripts": {
     "test-w": "mocha -R spec --ui bdd --watch ./tests/**/*-test.js",

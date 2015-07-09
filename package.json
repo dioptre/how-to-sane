@@ -8,6 +8,9 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {  
+  "dependencies": {
+    "lodash": "^3.10.0",
+    "sails-auth": "^1.2.7",
+    "sails-permissions": "^1.2.0"
   }
 }

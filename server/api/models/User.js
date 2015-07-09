@@ -1,15 +1,12 @@
+// api/models/User.js
 var bcrypt = require('bcrypt');
 
-/**
- * User
- *
- * @module      :: Model
- * @description :: A short summary of how this model works and what it represents.
- * @docs		:: http://sailsjs.org/#!documentation/models
- */
+var _ = require('lodash');
+var _super = require('sails-permissions/api/models/User');
+_.merge(exports, _super);
+_.merge(exports, {
 
-module.exports = {
-
+  // Extend with custom logic here by adding additional fields, methods, etc.
     attributes: {
 
         // Relationships
@@ -68,7 +65,6 @@ module.exports = {
         },
 
 
-
         isAdmin: function() {
             return this.userType == 3;
         },
@@ -105,4 +101,5 @@ module.exports = {
             });
         });
     }
-};
+});
+

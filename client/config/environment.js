@@ -22,12 +22,17 @@ module.exports = function(environment) {
   ENV.contentSecurityPolicy =  {
           'default-src': "'self' https://maps.googleapis.com",
           'font-src': "*",
-          'connect-src': "'self' https://maps.googleapis.com",
+          'connect-src': "'self' https://maps.googleapis.com ws://ubegin.cloudapp.net:35729 ws://ubegin.cloudapp.net:4200",
           'img-src': "*",
           'style-src': "* 'unsafe-inline'",
           'frame-src': "*",
-          'script-src': "'self' 'unsafe-eval' *.googleapis.com *.gstatic.com"
+          'script-src': "'self' 'unsafe-eval' 'unsafe-inline' *.googleapis.com *.gstatic.com ubegin.cloudapp.net:35729"
   };
+
+
+
+
+
 
   ENV['simple-auth'] = {
       authorizer: 'simple-auth-authorizer:oauth2-bearer'

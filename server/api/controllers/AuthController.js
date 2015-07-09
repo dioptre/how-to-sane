@@ -1,14 +1,21 @@
+// api/controllers/AuthController.js
+
 var jwt = require('jsonwebtoken');
-var _ = require('lodash');
 var secret = 'RS#$09qu43f09qfj94qf*&H#(R';
 var refreshSecret = 'rw5&&$$2224124f*&H#(R';
 var bcrypt = require('bcrypt');
+var _ = require('lodash');
+var _super = require('sails-permissions/api/controllers/AuthController');
+
+_.merge(exports, _super);
+_.merge(exports, {
+
+  // Extend with custom logic here by adding additional fields, methods, etc.
 
 /**
  * AuthController
  */
 
-module.exports = {
     login: function(req, res) {
 
         if (req.body.grant_type === 'password') {
@@ -68,7 +75,7 @@ module.exports = {
             };
         }
     }
-};
+});
 
 function issueTokens(user, res) {
     var expirationTimeInMinutes = 60 * 2;
@@ -87,4 +94,4 @@ function issueTokens(user, res) {
         expires_in: expirationTimeInMinutes * 60, // because simple auth expects seconds
         refresh_token: refreshToken
     });
-}
+};

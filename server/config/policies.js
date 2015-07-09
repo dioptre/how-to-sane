@@ -25,7 +25,26 @@ module.exports.policies = {
      *                                                                          *
      ***************************************************************************/
 
-    '*': "hasToken",
+//    '*': "hasToken",
+
+'*': [
+    'basicAuth',
+    'passport',
+    'sessionAuth',
+    'hasToken',
+    'ModelPolicy',
+    'AuditPolicy',
+    'OwnerPolicy',
+    'PermissionPolicy',
+    'RolePolicy',
+    'CriteriaPolicy'
+  ],
+
+  AuthController: {
+    '*': [ 'passport' ]
+  },
+
+
     AppController: {
         'serve': true
     },
@@ -35,9 +54,9 @@ module.exports.policies = {
     UserController: {
         "create": true,
     },
-    AuthController: {
-        '*': true,
-    }
+//    AuthController: {
+//        '*': true,
+//    }
 
     /***************************************************************************
      *                                                                          *
