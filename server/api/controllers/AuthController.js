@@ -1,5 +1,4 @@
 // api/controllers/AuthController.js
-
 var jwt = require('jsonwebtoken');
 var secret = 'RS#$09qu43f09qfj94qf*&H#(R';
 var refreshSecret = 'rw5&&$$2224124f*&H#(R';
@@ -88,7 +87,8 @@ function issueTokens(user, res) {
     var refreshToken = jwt.sign(user[0], refreshSecret, {
         expiresInMinutes: expirationTimeInMinutes
     });
-
+    Token.create({ token: token, user: user[0] }).exec(function(){});
+ 
     res.send({
         user: user[0],
         access_token: token,
