@@ -3,7 +3,7 @@ import DS from 'ember-data';
 export default DS.Model.extend({
 
     // relationships
-    user: DS.belongsTo('user'),
+    user: DS.belongsTo('user', {async : true}),
 
     // attributes
     title: DS.attr('string'),
